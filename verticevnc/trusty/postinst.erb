@@ -1,0 +1,9 @@
+#!/bin/sh
+
+mkdir -p <%= @basic[:loghome] %>/<%= @package[:package] %>
+
+cd <%= @basic[:home]+"/"+@package[:package] %>
+
+start verticevnc
+
+initctl reload-configuration
